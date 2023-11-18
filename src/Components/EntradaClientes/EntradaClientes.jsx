@@ -43,7 +43,7 @@ const EntradaClientes = () => {
 
         try {
             console.log('Datos del formulario:', formData);
-            const response = await axios.post('http://localhost:8000/clientes', formData);
+            const response = await axios.post('https://sistema-back-f5xx.onrender.com/clientes', formData);
 
             if (response.data.success) {
                 console.log('Datos enviados con éxito');

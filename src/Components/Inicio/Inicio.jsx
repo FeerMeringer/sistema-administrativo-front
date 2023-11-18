@@ -22,17 +22,19 @@ export default function Inicio() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+  
     try {
-      const response = await axios.post('http://localhost:8000/auth/signin', formData);
-
+      const response = await axios.post('https://sistema-back-f5xx.onrender.com/auth/signin', formData);
+  
       if (response.status === 200) {
         navigate('/PaginaPrincipal'); // Redirigimos al usuario a la página principal
       }
     } catch (error) {
       console.error('Error al iniciar sesión:', error);
+      console.error('Error de respuesta:', error.response.data);
     }
   };
+  
 
   return (
     <div className="inicio">

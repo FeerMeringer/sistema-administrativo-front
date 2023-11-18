@@ -14,7 +14,7 @@ const FormularioVentas = () => {
 
   useEffect(() => {
     // Cargar las ventas desde el backend al montar el componente
-    axios.get('http://localhost:8000/ventas')
+    axios.get('https://sistema-back-f5xx.onrender.com/ventas')
       .then(response => setVentas(response.data.ventas))
       .catch(error => console.error('Error al cargar las ventas:', error));
   }, []);
@@ -23,7 +23,7 @@ const FormularioVentas = () => {
     e.preventDefault();
 
     // Enviar la nueva venta al backend usando Axios
-    axios.post('http://localhost:8000/ventas', { producto, monto })
+    axios.post('https://sistema-back-f5xx.onrender.com/ventas', { producto, monto })
       .then(response => {
         // Actualizar el estado con la nueva venta
         setVentas([...ventas, response.data.venta]);
@@ -36,12 +36,18 @@ const FormularioVentas = () => {
   };
 
   const handleEliminarVenta = (id) => {
-    axios.delete(`http://localhost:8000/ventas/${id}`)
-      .then(response => {
-        setVentas(ventas.filter(venta => venta._id !== id));
+    axios
+      .delete(`https://sistema-back-f5xx.onrender.com/ventas/${id}`)
+      .then((response) => {
+        setVentas(ventas.filter((venta) => venta._id !== id));
+        console.log(`Venta con ID ${id} eliminada correctamente`);
+        // Puedes agregar lógica adicional después de eliminar la venta si es necesario
       })
-      .catch(error => console.error('Error al eliminar la venta:', error));
+      .catch((error) => {
+        console.error('Error al eliminar la venta', error);
+      });
   };
+  
 
   const totalPorProducto = ventas.reduce((totalPorProducto, venta) => {
     const { producto, monto } = venta;
