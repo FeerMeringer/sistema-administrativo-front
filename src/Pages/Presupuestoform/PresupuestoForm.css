@@ -1,0 +1,33 @@
+.presupuesto {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+}
+.contenedor-presupuesto {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 2rem;
+    
+}
+.sin-linea {
+    border: none;
+    border-bottom: 1px solid #ccc; 
+    outline: none
+}
+.tabla-presupuesto {
+    height: 35rem;
+    padding: 2rem;
+}
+.input-tabla {
+    height: 4rem;
+    border: none;
+    outline: none;
+    display: flex;
+}
+.total-presupuesto {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 1rem;
+}
