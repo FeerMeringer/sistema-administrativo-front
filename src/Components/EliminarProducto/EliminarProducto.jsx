@@ -10,7 +10,7 @@ export default function EliminarProducto() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:8000/productos');
+        const response = await axios.get('https://sistema-back-f5xx.onrender.com/productos');
         setProductos(response.data.productos);
       } catch (error) {
         console.error('Error al obtener la lista de productos:', error);
@@ -22,7 +22,7 @@ export default function EliminarProducto() {
 
   const handleEliminar = (id) => {
     axios
-      .delete(`http://localhost:8000/productos/${id}`)
+      .delete(`https://sistema-back-f5xx.onrender.com/productos/${id}`)
       .then((response) => {
         setProductos(productos.filter((producto) => producto._id !== id));
         console.log(`Producto con ID ${id} eliminado correctamente`);
@@ -33,6 +33,7 @@ export default function EliminarProducto() {
         console.error('Error al eliminar el producto', error);
       });
   };
+  
 
   const handleNavigateToListaPrecios = () => {
     navigate('/ListaPrecios');

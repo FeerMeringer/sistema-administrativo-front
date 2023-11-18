@@ -10,7 +10,7 @@ const ListaClientes = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:8000/clientes');
+        const response = await axios.get('https://sistema-back-f5xx.onrender.com/clientes');
         setClientes(response.data.clientes);
       } catch (error) {
         console.error('Error al obtener la lista de clientes:', error);

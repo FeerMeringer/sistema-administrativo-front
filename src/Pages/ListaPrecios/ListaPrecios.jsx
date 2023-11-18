@@ -10,7 +10,7 @@ export default function ListaPrecios() {
   useEffect(() => {
     const fetchProductos = async () => {
       try {
-        const response = await axios.get('http://localhost:8000/productos');
+        const response = await axios.get('https://sistema-back-f5xx.onrender.com/productos');
         setProductos(response.data.productos);
       } catch (error) {
         console.error('Error al obtener la lista de precios:', error);

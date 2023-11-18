@@ -37,7 +37,7 @@ const InstalacionFormulario = () => {
         e.preventDefault();
 
         try {
-            const response = await axios.post('http://localhost:8000/instalacion', {
+            const response = await axios.post('https://sistema-back-f5xx.onrender.com/instalacion', {
                 nombreCompleto: clienteInfo.nombreCompleto,
                 direccion: clienteInfo.direccion,
                 fechaInicio: instalacionInfo.fechaInicio,
@@ -74,7 +74,7 @@ const InstalacionFormulario = () => {
     const handleEliminarInstalacion = async (id) => {
         try {
             // Envía una solicitud DELETE al servidor para eliminar la instalación
-            const response = await axios.delete(`http://localhost:8000/instalacion/${id}`);
+            const response = await axios.delete(`https://sistema-back-f5xx.onrender.com/instalacion/${id}`);
 
             // Verifica si la eliminación fue exitosa (status 200)
             if (response.status === 200) {

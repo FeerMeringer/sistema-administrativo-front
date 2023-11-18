@@ -11,7 +11,7 @@ export default function ModificarCliente() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:8000/clientes');
+        const response = await axios.get('https://sistema-back-f5xx.onrender.com/clientes');
         setClientes(response.data.clientes);
       } catch (error) {
         console.error('Error al obtener la lista de clientes:', error);
@@ -23,7 +23,7 @@ export default function ModificarCliente() {
 
   const handleEliminar = (id) => {
     axios
-      .delete(`http://localhost:8000/clientes/${id}`)
+      .delete(`https://sistema-back-f5xx.onrender.com/clientes/${id}`)
       .then((response) => {
         setClientes(clientes.filter((cliente) => cliente._id !== id));
         console.log(`Cliente con ID ${id} eliminado correctamente`);
