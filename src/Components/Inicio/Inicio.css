@@ -1,0 +1,20 @@
+.inicio {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: center;
+    height: 90vh;
+    width: 100vw;
+}
+.titulo {
+    font-size: 3rem;
+}
+.foto {
+    width: 25vw;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 32rem;
+}

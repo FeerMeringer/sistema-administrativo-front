@@ -1,0 +1,72 @@
+.grafico {
+    text-align: center;
+    height: 100vh;
+  }
+  
+  .listo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .gra {
+    margin-right: 60px;
+  }
+  
+  .total {
+    padding: 3rem;
+    margin-right: 10rem;
+    display: flex;
+    height: 95vh;
+    width: 80vw;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+  }
+ 
+  .total p {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 1rem;
+  }
+  
+  .total ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .total li {
+    margin-bottom: 5px;
+  }
+  
+  .formGrafico {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 15rem;
+    width: 50vw;
+    justify-content: center;
+    align-items: center;
+
+  }
+  .boton {
+    width: 5rem;
+  }
+  .rin {
+    width: 8rem;
+  }
+  .boton-navegar {
+    position: fixed;
+    bottom: 10px;
+    left: 15px;
+    
+  }
+  .mali {
+  gap: 1rem;
+  margin: 1rem;
+}
+.mali1 {
+  gap: 1rem;
+  margin: 1rem;
+  margin-right: 0.6rem;
+}

@@ -1,0 +1,31 @@
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+
+.card {
+    width: 200px;
+    height: 200px;
+    border: 2px solid  darkgreen;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+.paginaPrincipal {
+    text-align: center;
+    font-weight: bold;
+    height: 96vh;
+}
+.fotoCliente {
+    width: 4rem;
+    margin-top: 2rem;
+    margin: 1rem;
+}
